@@ -50,6 +50,79 @@ void Civ::setEdificios(vector<Edificio> ee){
     edificios = ee;
 }
 
+string Civ::getNombre(){
+    return nombre;
+}
+
+long Civ::getOro(){
+    return oro;
+}
+
+long Civ::getMadera(){
+    return madera;
+}
+
+long Civ::getPiedra(){
+    return piedra;
+}
+
+long Civ::getAlimento(){
+    return alimento;
+}
+
+long Civ::getMax(){
+    return pob_max;
+}
+
+long Civ::getAct(){
+    pob_act = tropas.size()+aldeanos.size();
+    return pob_act;
+}
+
+long Civ::getCap(){
+    return pob_cap;
+}
+
+void Civ::addOro(long l){
+    oro += l;
+}
+
+void Civ::addMadera(long l){
+    madera += l;
+}
+
+void Civ::addPiedra(long l){
+    piedra += l;
+}
+
+void Civ::addAlimento(long l){
+    alimento += l;
+}
+
+void Civ::addCap(long l){
+    pob_cap += l;
+}
+
+void Civ::subtOro(long l){
+    oro -= l;
+}
+
+void Civ::subtMadera(long l){
+    madera -= l;
+}
+
+void Civ::subtPiedra(long l){
+    piedra -= l;
+}
+
+void Civ::subtAlimento(long l){
+    alimento -= l;
+}
+
+void Civ::subtCap(long l){
+    pob_cap -= l;
+}
+
 void Civ::desterrar(){
     aldeanos.clear();
     tropas.clear();

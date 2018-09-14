@@ -56,8 +56,18 @@ class Civ{
         void setAct(long);
         void setCap(long);
 
+        void addOro(long);
+        void addMadera(long);
+        void addPiedra(long);
+        void addAlimento(long);
+        void addCap(long);
 
-
+        void subtOro(long);
+        void subtMadera(long);
+        void subtPiedra(long);
+        void subtAlimento(long);
+        void subtCap(long);
+        
         void desterrar();
 
 
