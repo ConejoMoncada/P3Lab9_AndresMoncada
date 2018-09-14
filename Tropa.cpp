@@ -1,11 +1,13 @@
 #include "Tropa.h"
 
 Tropa::Tropa(){
-
 }
 
 double Tropa::ataque(){
-
+    return neto;
+}
+string Tropa::getTipo(){
+    return tipo;
 }
 
 long Tropa::getCalimento(){

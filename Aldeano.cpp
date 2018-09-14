@@ -2,9 +2,13 @@
 
 Aldeano::Aldeano(){
     sexo = '?';
-    costo = 500;
+    costo = 55;
 }
 
+Aldeano::Aldeano(char s){
+    sexo = s;
+    costo = 55;
+}
 
 char Aldeano::getSexo(){
     return sexo;

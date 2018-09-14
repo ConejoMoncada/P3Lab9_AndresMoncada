@@ -8,7 +8,6 @@ class Soldado:public Tropa{
         Soldado();
         Soldado(long,long,int,int,int,int);
 
-        double ataque();
 
         ~Soldado();
 };

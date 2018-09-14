@@ -7,6 +7,7 @@ class Aldeano{
         long costo;
     public:
         Aldeano();
+        Aldeano(char);
 
         char getSexo();
         void setSexo(char);

@@ -7,8 +7,6 @@ class Caballeria:public Tropa{
     public:
         Caballeria();
 
-        double ataque();
-
         ~Caballeria();
 };
 #endif

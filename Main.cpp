@@ -63,6 +63,7 @@ int main(){
                     cin >> index;
                 }
                 j.setCiv(civilizaciones[index]);
+                jugadores.push_back(j);
             }
             break;
             case 3:{
@@ -84,4 +85,62 @@ int main(){
     }while(op != 0);
 
     return 0;
+}
+
+void inicio(){
+    int op,s_op;
+    do{
+        cout << jact.getCiv().getNombre() << endl << jact.getCiv().getAldeanos().size() << " Aldeanos"
+        << endl << jact.getCiv().getTropas().size() << " Tropas" << endl
+        << jact.getCiv().getAlimento() << " Uds. alimento" << endl
+        << jact.getCiv().getOro() << " Uds. oro" << endl
+        << jact.getCiv().getPiedra() << " Uds. piedra" << endl
+        << jact.getCiv().getMadera() << " Uds. madera" << endl
+        << "Capacidad: " << jact.getCiv().getCap() << endl
+        << "Límite: " << jact.getCiv().getMax() << endl;
+        cout << "1. Nuevo aldeano" << endl << "2. Buscar recursos" << endl 
+        << "3. Nuevo edificio" << endl << "4. Nueva tropa" << endl
+        << "4. Desterrar población" << endl << "5. Batalla" << endl 
+        << "6. Finalizar turno" << endl << "0. Volver a menu principal" << endl
+        << "Ingrese una opción: ";
+        cin >> op;
+        switch (op){
+            case 1:{
+                if(jact.getCiv().getAlimento() < 55){
+                    cout << "No hay recursos para crear esta unidad" << endl;
+                }
+                else{
+                    char s;
+                    cout << "Sexo del aldeano [m/f]: ";
+                    cin >> s;
+                    Aldeano aa(s);
+                    jact.getCiv().getAldeanos().push_back(aa);
+                    jact.getCiv().subtAlimento(55);
+                }
+            }
+            break;
+            case 2:{
+                for(int i = 0; i < jact.getCiv().getAldeanos().size(); i ++){
+                    jact.getCiv().addAlimento(50);
+                    jact.getCiv().addMadera(40);
+                    jact.getCiv().addOro(30);
+                    jact.getCiv().addPiedra(20);
+                }
+            }break;
+            case 4:{
+                jact.getCiv().desterrar();
+            }break;
+        }
+        /*
+        
+        Casa
+        Cuartel
+        Castillo
+        
+        Soldado
+        Caballería
+        Guerrero especial
+        
+        */
+    }while(op!= 0);
 }

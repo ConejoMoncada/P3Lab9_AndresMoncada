@@ -6,8 +6,6 @@ class Guerrero:public Tropa{
     public:
         Guerrero();
 
-        double ataque();
-
         ~Guerrero();
 };
 #endif

@@ -1,15 +1,20 @@
 #ifndef TROPA_H
 #define TROPA_H
 
+#include<string>
+using std::string;
 class Tropa{
     protected:
         char sexo;
+        string tipo;
         long c_alimento,c_oro;
-        int atk,def,hp,spd,entrenamiento;
+        double atk,def,hp,spd,entrenamiento,neto;
     public:
         Tropa();
 
-        virtual double ataque();
+        double ataque();
+
+        string getTipo();
 
         long getCalimento();
         long getCoro();

@@ -13,9 +13,12 @@ Civ::Civ(string nom,long pm){
     oro = 0;
     piedra = 0;
     alimento = 100;
+    madera = 0;
     pob_max = pm;
     pob_act = 0;
-    pob_cap = 0;
+    pob_cap = 5;
+    Casa ca;
+    edificios.push_back(ca);
 }
 
 void Civ::listarTropas(){
