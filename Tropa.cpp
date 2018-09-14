@@ -4,7 +4,7 @@ Tropa::Tropa(){
 
 }
 
-double ataque(){
+double Tropa::ataque(){
 
 }
 

@@ -26,7 +26,7 @@ class Civ{
         vector<Edificio> edificios;
     public:
         Civ();
-        Civ(string,long,long,long,long);
+        Civ(string,long);
 
         void listarTropas();
 

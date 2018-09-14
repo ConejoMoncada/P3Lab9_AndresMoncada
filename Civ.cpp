@@ -8,11 +8,11 @@ Civ::Civ(){
 
 }
 
-Civ::Civ(string nom,long o,long p,long a,long pm){
+Civ::Civ(string nom,long pm){
     nombre = nom;
-    oro = o;
-    piedra = p;
-    alimento = a;
+    oro = 0;
+    piedra = 0;
+    alimento = 100;
     pob_max = pm;
     pob_act = 0;
     pob_cap = 0;
